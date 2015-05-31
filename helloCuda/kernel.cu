@@ -161,5 +161,6 @@ int main() {
     printf( "Hello,CUDA\n" );
     testCudaAdd();
     testCudaMult();
+    cudaDeviceReset();
     return 0;
 }
