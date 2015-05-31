@@ -155,6 +155,10 @@ void testCudaMult() {
     printf( "GPU: %d (us)\n", gpuTime.count() );
     printf( "\n" );
     printf( "rate = %.4f (%dx%d matrix)\n", cpuTime.count() / (double)gpuTime.count(), COUNT, COUNT );
+
+    cudaFree( devA );
+    cudaFree( devB );
+    cudaFree( devC );
 }
 
 int main() {
